@@ -6,6 +6,7 @@ import {
   Patch,
   Param,
   Delete,
+  Req,
 } from '@nestjs/common';
 import { PatientsService } from '../service/patients.service';
 import { CreatePatientDto } from '../dto/create-patient.dto';
@@ -21,7 +22,10 @@ export class PatientsController {
   }
 
   @Get()
-  findAll() {
+  findAll(@Req() req: Request) {
+    console.log(req.headers['authorization']);
+    console.log(req.headers['scope']);
+    console.log('Find All Called');
     return this.patientsService.findAll();
   }
 
