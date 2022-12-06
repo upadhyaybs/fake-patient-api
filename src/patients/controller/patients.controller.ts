@@ -6,6 +6,7 @@ import {
   Patch,
   Param,
   Delete,
+  Request,
   Req,
 } from '@nestjs/common';
 import { PatientsService } from '../service/patients.service';
