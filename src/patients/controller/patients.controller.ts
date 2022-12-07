@@ -26,7 +26,7 @@ export class PatientsController {
   findAll(@Req() req: Request) {
     console.log(req.headers['authorization']);
     console.log(req.headers['scope']);
-    console.log('Find All Called');
+    console.log('Patient API - Find All Called');
     return this.patientsService.findAll();
   }
 
